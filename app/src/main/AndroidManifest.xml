@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.recycler_date">
+    <!-- 安卓读写sd权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DEVICE_POWER"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MainTwoActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".activity.MainThreeActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".activity.RingActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".activity.MainFourActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".activity.MainFiveActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".activity.MainSixActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".calendar.SyllabusActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".calendar.DingdingActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".activity.HorizonActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".activity.CoordinateActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".activity.EndGuideActivity"
+            android:launchMode="singleTask"/>
+        <receiver android:name=".broadcastreceiver.AlarmReceiver">
+            <intent-filter>
+                <action android:name="android.alarm.demo.action" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcastreceiver.Ring">
+            <intent-filter>
+                <action android:name="com.zking.g158231_android28.RING"></action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcastreceiver.AlarmThreeReceiver">
+            <intent-filter>
+                <action android:name="com.ex.action.BC_ACTION"></action>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

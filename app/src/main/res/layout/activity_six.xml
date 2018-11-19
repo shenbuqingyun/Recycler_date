@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/ViewRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <com.example.recycler_date.customview.CustomViewL
+            android:id="@+id/mCustomView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_dark"
+            android:orientation="horizontal">
+
+        </com.example.recycler_date.customview.CustomViewL>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/mCustomView"
+            android:layout_alignLeft="@id/mCustomView"
+            android:layout_alignRight="@id/mCustomView"
+            android:layout_alignTop="@id/mCustomView" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:text="保存" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:text="删除" />
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_sensor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:text="@string/test_typeface"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/move_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:text="闹钟" />
+
+        <Button
+            android:id="@+id/date_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:text="DatePicker" />
+
+        <Button
+            android:id="@+id/time_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:text="TimePicker" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/test_blog1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="闹钟新界面" />
+
+        <Button
+            android:id="@+id/test_blog2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="闹钟倒计时弹窗" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/test_blog3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="秒表" />
+
+        <Button
+            android:id="@+id/test_blog4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="高级秒表" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/calendar_super"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="supercalendar" />
+
+        <Button
+            android:id="@+id/calendar_xiaomi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xiaomicalendar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/horizon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="horizon回弹" />
+
+        <Button
+            android:id="@+id/iOS_scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="iOS相机滑动" />
+
+        <Button
+            android:id="@+id/shape_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_shadow"
+            android:text="shape阴影" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--一个很好的波纹自定义view https://github.com/traex/RippleEffect-->
+        <!--后期使用时需要定义的属性只有rv_color一项-->
+        <com.andexert.library.RippleView
+            android:id="@+id/more"
+            rv_centered="true"
+            android:layout_width="?android:actionBarSize"
+            android:layout_height="?android:actionBarSize"
+            android:layout_margin="5dp"
+            app:rv_color="#fff000"
+            app:rv_zoom="true">
+
+            <!--android:src="@android:drawable/ic_menu_edit"-->
+            <!--android:background="@android:color/holo_blue_dark"-->
+            <ImageView
+                android:id="@+id/kill"
+                android:layout_width="?android:actionBarSize"
+                android:layout_height="?android:actionBarSize"
+                android:layout_centerInParent="true"
+                android:background="@android:color/holo_blue_dark"
+                android:padding="10dp"
+                android:src="@android:drawable/ic_menu_edit" />
+
+        </com.andexert.library.RippleView>
+        <!--app:rv_alpha 值为0时完全看不见 值为255会扩散到边界-->
+        <!--app:rv_ripplePadding 值为100时圆很小 应该是处理半径的 不设置默认为0即可-->
+        <!--app:rv_framerate app:rv_rippleDuration 均不设置默认即可-->
+        <com.andexert.library.RippleView
+            android:id="@+id/more2"
+            rv_centered="true"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:layout_margin="5dp"
+            app:rv_alpha="255"
+            app:rv_color="#fff000"
+            app:rv_framerate="10"
+            app:rv_rippleDuration="400"
+            app:rv_zoom="true">
+
+            <!--android:src="@android:drawable/ic_menu_edit"-->
+            <!--android:background="@android:color/holo_blue_dark"-->
+            <!--android:layout_height="?android:actionBarSize"-->
+            <Button
+                android:id="@+id/destory"
+                android:layout_width="match_parent"
+                android:layout_height="?android:actionBarSize"
+                android:layout_centerInParent="true"
+                android:alpha="125"
+                android:background="@android:color/holo_blue_dark"
+                android:padding="10dp"
+                android:text="水波纹效果 自定义颜色即可" />
+
+        </com.andexert.library.RippleView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/end_guide"
+            android:layout_width="?android:actionBarSize"
+            android:layout_height="?android:actionBarSize"
+            android:text="终极导航"/>
+
+    </LinearLayout>
+</LinearLayout>
